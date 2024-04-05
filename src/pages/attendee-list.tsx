@@ -1,9 +1,9 @@
 import { Search, MoreHorizontal, ChevronsLeft, ChevronsRight, ChevronLeft, ChevronRight } from 'lucide-react';
-import { IconButton } from './icon-button';
-import { Table } from './table/table';
-import { TableHeader } from './table/table-header';
-import { TableCell } from './table/table-cell';
-import { TableRow } from './table/table-row';
+import { IconButton } from '../components/icon-button';
+import { Table } from '../components/table/table';
+import { TableHeader } from '../components/table/table-header';
+import { TableCell } from '../components/table/table-cell';
+import { TableRow } from '../components/table/table-row';
 import { ChangeEvent, useEffect, useState } from 'react';
 import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';
@@ -49,7 +49,7 @@ export function AttendeeList() {
 
     useEffect(() => {
 
-        const url = new URL('http://localhost:3333/events/9e9bd979-9d10-4915-b339-3786b1634f33/attendees')
+        const url = new URL('http://localhost:3333/events/e335e26e-50ab-4283-9d35-549be5b7a8d9/attendees')
 
         url.searchParams.set('pageIndex', String(page - 1))
         
